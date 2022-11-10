@@ -60,7 +60,9 @@ https://clinicaltrialskorea.com/
 
 # ![image1](https://user-images.githubusercontent.com/104307213/201096343-42063cbe-9a8f-4c23-b5ee-7f21c2680f5d.gif)
 
-- 인풋의 온체인지를 통해 함수 실행
+---
+
+# 검색창
 
 ## 💡 logic
 
@@ -68,15 +70,23 @@ https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/blob/b9006c6e183d9f
 
 https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/blob/b9006c6e183d9f94534b4ed72dcfadaee8ee9240/src/components/Main.tsx#L24-L30
 
-- 검색어가 없을 시 “검색어 없음” 표출
+```
+인풋의 온체인지를 통해 함수 실행
+```
 
 # ![스크린샷 2022-11-10 오후 9 48 25](https://user-images.githubusercontent.com/104307213/201096740-6d9b8c85-4602-49fe-9de4-f6bb6afe5824.png)
+
+```
+검색어가 없을 시 “검색어 없음” 표출
+```
 
 ## 💡 logic
 
 https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/blob/b9006c6e183d9f94534b4ed72dcfadaee8ee9240/src/components/RecommendWords.tsx#L8-L10
 
-- 인풋이 포커스 되었을때 검색어 창 노출 & 인풋 박스 보더가 추가 되도록 UI 구현
+```
+ 인풋이 포커스 되었을때 검색어 창 노출 & 인풋 박스 보더가 추가 되도록 UI 구현
+```
 
 # ![스크린샷 2022-11-10 오후 9 48 32](https://user-images.githubusercontent.com/104307213/201097348-e3996839-4fd3-4af1-802a-456b4766a6db.png)
 
@@ -86,21 +96,27 @@ https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/blob/b9006c6e183d9f
 
 - API 호출 최적화
 
-  - API 호출별로 로컬 캐싱 구현
-    - 캐싱을 쿼리스트링으로 변환하여 캐시스토리지에 저장
-    # ![스크린샷 2022-11-10 오후 9 45 42](https://user-images.githubusercontent.com/104307213/201096796-f4d31e33-f12e-413c-b503-ce9e61878290.png)
+```
+   쿼리스트링으로 변환하여 캐시스토리지에 저장 API 호출별로 로컬 캐싱 구현
+```
+
+# ![스크린샷 2022-11-10 오후 9 45 42](https://user-images.githubusercontent.com/104307213/201096796-f4d31e33-f12e-413c-b503-ce9e61878290.png)
 
 ## 💡 logic
 
 https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/blob/b9006c6e183d9f94534b4ed72dcfadaee8ee9240/src/api/AxiosService.ts#L13-L25
 
-    - 디바운스 사용 / 0.8초 후에 api가 다시 재 호줄 되도록 호출 횟수를 줄임
+```
+    디바운스 / 0.8초 후에 api가 다시 재 호줄 되도록 호출 횟수를 줄임
+```
 
 ## 💡 logic
 
 https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/blob/b9006c6e183d9f94534b4ed72dcfadaee8ee9240/src/hooks/useAddSearch.ts#L22-L24
 
-    - API를 호출할 때 마다 `console.info("calling api")` 출력을 통해 콘솔창에서 API 호출 횟수 확인이 가능하도록 설정
+```
+ API를 호출할 때 마다 `console.info("calling api")` 출력을 통해 콘솔창에서 API 호출 횟수 확인이 가능하도록 설정
+```
 
 # ![스크린샷 2022-11-10 오후 9 45 18](https://user-images.githubusercontent.com/104307213/201096843-0e5beada-5da2-4c60-aa66-0090903c748a.png)
 
