@@ -227,8 +227,8 @@ https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/blob/bbf1724458dd76
 
 #
 
-### **7️⃣ Assignment (추가 기능)**
-
+### **7️⃣ Assignment**
+> (추가 기능)
 - isLoading 대신 Suspense 구현
 
 https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/blob/7b4fb302901a98f2222b5b1f38117d2102005542/src/pages/Main/AutoComplete/index.tsx#L12-L14
