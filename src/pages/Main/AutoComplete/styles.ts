@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const DropDownBox = styled.ul`
+  display: none;
+
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -15,12 +17,12 @@ export const DropDownBox = styled.ul`
   box-shadow: rgba(30, 32, 37, 0.1) 0px 2px 10px;
   position: absolute;
 
-  &.active > div {
-    display: flex;
+  &.active {
+    display: block;
   }
-
+  
   > div {
-    display: none;
+    display: flex;
     flex-direction: column;
     max-height: 400px;
     overflow: auto;
