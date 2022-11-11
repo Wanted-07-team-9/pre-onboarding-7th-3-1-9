@@ -33,16 +33,17 @@ const SearchPage = () => {
 
   return (
     <Styled.PageContainer>
-      메인페이지
+      <Styled.PageTitle>
+        국내 모든 임상시험 검색하고
+        <br />
+        온라인으로 참여하기
+      </Styled.PageTitle>
       <Styled.SearchInput onChange={InputData} placeholder="질환명을 입력해주세요" />
       {condition.length === 0 ? null : (
         <Styled.ResultItems>
+          {items.length === 0 && <div>검색어 없음</div>}
           {items?.map((el, idx) => {
-            if (items.length === 0) {
-              return <p>검색어 없음</p>;
-            } else {
-              return <div key={idx}>{el.sickNm}</div>;
-            }
+            return <div key={idx}>{el.sickNm}</div>;
           })}
         </Styled.ResultItems>
       )}

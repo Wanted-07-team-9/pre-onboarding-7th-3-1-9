@@ -5,6 +5,10 @@ export const PageContainer = styled.div`
   flex-direction: column;
   align-items: center;
 `;
+export const PageTitle = styled.h2`
+  text-align: center;
+  margin-bottom: 20px;
+`;
 export const SearchInput = styled.input`
   padding: 25px;
   border-radius: 30px;
