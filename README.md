@@ -158,11 +158,15 @@ https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/blob/bbf1724458dd76
 
 ⭐️⭐️⭐️⭐️⭐️
 
-### 브라우저의 Cache Storage에 queryString을 저장하고,
+### Cache Storage를 사용하여 캐싱 기능을 제공하였습니다.
 
-### API 호출전에 Cache Storage에 queryString이 존재하면 해당 데이터 리턴 하도록 사용
+### Cache Storage에는 queryString을 키값(name)으로 데이터와 etag를 저장합니다.
 
-### Cache Storage에 없을경우 API 호출 진행
+### API 호출시 Cache Storage에 queryString 값이 존재하면 etag를 header에 포함하여 호출 진행하며,
+
+### response status === 200 이면 받은 response.data를 표출하고, etag와 data 값을 Cache Storage에 저장합니다.
+
+### response status === 304 이면 Cache Storage에서 data 값을 가져와서 표출합니다.
 
 ⭐️⭐️⭐️⭐️⭐️
 
@@ -170,7 +174,9 @@ https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/blob/bbf1724458dd76
 <img width="420" alt="cache" src="https://user-images.githubusercontent.com/74575497/200842174-e1b72327-5569-4b5e-b7d7-594ec5499587.png">
 </p>
 
-https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/blob/bbf1724458dd765687641bed9246447632d70bc6/src/apis/ClinicalService.ts#L4-L31
+https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/blob/85669cb51623fb669b11bec7ae4ff0bd339553c2/src/apis/ClinicalService.ts#L5-L51
+
+<!-- https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/blob/bbf1724458dd765687641bed9246447632d70bc6/src/apis/ClinicalService.ts#L4-L31 -->
 
 #
 
@@ -228,7 +234,9 @@ https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/blob/bbf1724458dd76
 #
 
 ### **7️⃣ Assignment**
+
 > (추가 기능)
+
 - isLoading 대신 Suspense 구현
 
 https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/blob/7b4fb302901a98f2222b5b1f38117d2102005542/src/pages/Main/AutoComplete/index.tsx#L12-L14

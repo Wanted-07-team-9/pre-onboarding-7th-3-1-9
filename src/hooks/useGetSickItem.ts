@@ -1,6 +1,6 @@
 import { IResultItems } from '@types';
 import { getSick } from 'apis/ClinicalService';
-import { wrapPromise } from 'apis/wrapPromise';
+import { wrapPromise } from 'utils/wrapPromise';
 import { useEffect, useMemo, useState } from 'react';
 import { useAppDispatch } from 'redux/hooks';
 
