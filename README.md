@@ -174,9 +174,7 @@ https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/blob/bbf1724458dd76
 <img width="420" alt="cache" src="https://user-images.githubusercontent.com/74575497/200842174-e1b72327-5569-4b5e-b7d7-594ec5499587.png">
 </p>
 
-https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/blob/85669cb51623fb669b11bec7ae4ff0bd339553c2/src/apis/ClinicalService.ts#L5-L51
-
-<!-- https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/blob/bbf1724458dd765687641bed9246447632d70bc6/src/apis/ClinicalService.ts#L4-L31 -->
+https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/blob/8c6d325032818d697dc2f31b9540ebb32f2c3f1e/src/apis/axiosInstance.ts#L9-L35
 
 #
 
