@@ -1,6 +1,6 @@
 ## **✨ 배포링크**
 
-### [💙배포주소💙](https://pre-onboarding-7th-3-1-9.herokuapp.com/)
+### [💙배포주소💙](https://pre-onboarding-7th-3-1-9.herokuapp.com)
 
 ## 📝 목차
 
