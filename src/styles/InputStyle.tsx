@@ -7,6 +7,7 @@ function InputStyle({
   onBlur,
   onFocus,
   className,
+  onKeyDown,
 }: React.InputHTMLAttributes<HTMLInputElement>) {
   const { searchWords } = useAppSelector(state => state.searchData);
 
@@ -19,6 +20,7 @@ function InputStyle({
         <S.MainSearchInputStyle
           onChange={onChange}
           onFocus={onFocus}
+          onKeyDown={onKeyDown}
           value={searchWords}
           onBlur={onBlur}
           placeholder="질환명을 입력해 주세요"

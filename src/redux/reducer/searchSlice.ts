@@ -5,6 +5,7 @@ export type SliceType = {
   searchWords: string;
   loading: boolean;
   isOnFocus: boolean;
+  keyControl: number;
 };
 export interface sickData {
   sickCd: string;
@@ -15,6 +16,7 @@ const initialState: SliceType = {
   searchWords: '',
   loading: false,
   isOnFocus: false,
+  keyControl: -1,
 };
 
 export const searchSlice = createSlice({
@@ -33,9 +35,13 @@ export const searchSlice = createSlice({
     setOnFocus: (state, action) => {
       state.isOnFocus = action.payload;
     },
+    setKeyControl: (state, action) => {
+      state.keyControl = action.payload;
+    },
   },
 });
 
-export const { setSearchData, setSearchWords, setLoading, setOnFocus } = searchSlice.actions;
+export const { setSearchData, setSearchWords, setLoading, setOnFocus, setKeyControl } =
+  searchSlice.actions;
 
 export default searchSlice.reducer;

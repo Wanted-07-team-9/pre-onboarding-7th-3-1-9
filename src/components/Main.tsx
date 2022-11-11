@@ -4,10 +4,12 @@ import SearchRec from './SearchRec';
 import InputStyle from 'styles/InputStyle';
 import { setSearchWords, setOnFocus } from 'redux/reducer/searchSlice';
 import { useAppSelector, useAppDispatch } from 'redux/reducer/hooks';
+import useKeyBorad from 'hooks/useKeyBorad';
 
 function Main() {
   const dispatch = useAppDispatch();
-  const { isOnFocus } = useAppSelector(state => state.searchData);
+  const { isOnFocus, searchData } = useAppSelector(state => state.searchData);
+  const { keyDownControl } = useKeyBorad();
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(setSearchWords(e.currentTarget.value));
   };
@@ -25,6 +27,7 @@ function Main() {
         onChange={onChange}
         onFocus={onFocusInput}
         onBlur={onBlur}
+        onKeyDown={keyDownControl(searchData ? searchData : [])}
         className={isOnFocus ? 'active' : ''}
       />
       {isOnFocus && <SearchRec />}

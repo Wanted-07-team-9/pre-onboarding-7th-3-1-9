@@ -1,4 +1,4 @@
-import Main from 'components/Main';
+import Main from '../components/Main';
 import useAddSearch from 'hooks/useAddSearch';
 import * as S from '../styles/MainStyle';
 import Nav from '../assets/clinic-page-1.png';
