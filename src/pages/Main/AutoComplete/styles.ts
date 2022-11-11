@@ -20,7 +20,7 @@ export const DropDownBox = styled.ul`
   &.active {
     display: block;
   }
-  
+
   > div {
     display: flex;
     flex-direction: column;

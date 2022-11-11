@@ -9,6 +9,10 @@ const SearchBarIndex = () => {
 
   const onSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(setSearchWord(e.target.value));
+
+    if (e.target.value === '') {
+      dispatch(setSelectIndex(-1));
+    }
   };
 
   const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
