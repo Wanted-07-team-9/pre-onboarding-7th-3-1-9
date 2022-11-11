@@ -2,7 +2,7 @@ import * as S from '../styles/MainStyle';
 import { useAppSelector } from 'redux/reducer/hooks';
 
 function RecommendWords() {
-  const { searchData } = useAppSelector(state => state.searchData);
+  const { searchData, keyControl } = useAppSelector(state => state.searchData);
 
   // 배열의 객제
   if (searchData.length === 0) {
@@ -10,18 +10,16 @@ function RecommendWords() {
   }
 
   return (
-    <div>
+    <S.RecommendBoxItem>
       {searchData.map(({ sickNm }, idx) => {
         return (
-          <>
-            <S.recomText key={idx}>
-              <S.recomIcon />
-              <S.recomTexts>{sickNm}</S.recomTexts>
-            </S.recomText>
-          </>
+          <S.recomText key={idx} className={idx === keyControl ? 'keySelect' : ''}>
+            <S.recomIcon />
+            <S.recomTexts>{sickNm}</S.recomTexts>
+          </S.recomText>
         );
       })}
-    </div>
+    </S.RecommendBoxItem>
   );
 }
 

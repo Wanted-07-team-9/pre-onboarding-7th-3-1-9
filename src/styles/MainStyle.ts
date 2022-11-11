@@ -71,19 +71,27 @@ export const SearchRecLayout = styled.div`
   overflow: auto;
 `;
 
+export const RecommendBoxItem = styled.ul`
+  width: 100%;
+`;
+
 export const RecentWords = styled.p`
   color: #aaa;
   font-size: 1rem;
   font-weight: 500;
 `;
 
-export const recomText = styled.div`
+export const recomText = styled.li`
   font-weight: 300;
   margin-top: 10px;
   color: #555;
   display: flex;
   align-items: center;
   gap: 30;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 5px;
+  background-color: ${props => (props.className === 'keySelect' ? '#ddd' : '#fff')};
 `;
 
 export const recomTexts = styled.span`

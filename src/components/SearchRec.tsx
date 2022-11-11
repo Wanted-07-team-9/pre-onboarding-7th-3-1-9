@@ -1,6 +1,5 @@
 import * as S from '../styles/MainStyle';
 import RecommendWords from './RecommendWords';
-
 function SearchRec() {
   return (
     <S.SearchRecLayout>

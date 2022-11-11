@@ -1,11 +1,12 @@
 import { instance } from './ApiInstance';
 import { sickData } from '../redux/reducer/searchSlice';
-const END_POINT = 'sick';
 
+const END_POINT = 'sick';
 export const AxiosService = {
   getCashSearch: async (param: string): Promise<sickData[]> => {
     if ('caches' in window) {
       if (param === '') return [];
+
       const query = {
         sickNm_like: param,
       };
@@ -18,9 +19,9 @@ export const AxiosService = {
         const config = {
           params: query,
         };
+
         const { data } = await instance.get(`/${END_POINT}`, config);
         console.info('calling api');
-
         cashStorage.put(`${param}`, new Response(JSON.stringify(data)));
         return data;
       }
