@@ -6,7 +6,7 @@ export const instance = axios.create({
 
 instance.interceptors.request.use(
   config => {
-    return config;
+    return Promise.resolve(config);
   },
   error => {
     return Promise.reject(error.response);

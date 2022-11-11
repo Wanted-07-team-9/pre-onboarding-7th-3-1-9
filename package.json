@@ -56,6 +56,5 @@
     "eslint-config-prettier": "^8.5.0",
     "husky": "^8.0.2",
     "prettier": "^2.7.1"
-  },
-  "proxy": "https://json-server-beryl.vercel.app/api"
+  }
 }
