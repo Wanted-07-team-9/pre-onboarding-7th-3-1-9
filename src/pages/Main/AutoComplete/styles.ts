@@ -1,16 +1,12 @@
 import styled from 'styled-components';
 
 export const DropDownBox = styled.ul`
-  &.active {
-    display: flex;
-  }
-  display: none;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   background-color: rgb(255, 255, 255);
-  flex-direction: column;
+
   width: 100%;
   top: 100%;
   left: 0px;
@@ -19,13 +15,24 @@ export const DropDownBox = styled.ul`
   box-shadow: rgba(30, 32, 37, 0.1) 0px 2px 10px;
   position: absolute;
 
+  &.active > div {
+    display: flex;
+  }
+
+  > div {
+    display: none;
+    flex-direction: column;
+    max-height: 400px;
+    overflow: auto;
+  }
+
   p {
     padding-left: 16px;
     font-size: 12px;
     line-height: 12px;
     color: #6c737b;
 
-    margin: 5px 0;
+    margin: 8px 0;
   }
 `;
 
@@ -36,7 +43,7 @@ export const DropDownItem = styled.li`
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-
+  flex: 0 0 auto;
   &.over {
     background-color: #e2e2e2;
   }

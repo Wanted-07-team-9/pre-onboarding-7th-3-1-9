@@ -18,9 +18,8 @@ export const getSick = async (param: string): Promise<ISicks[]> => {
         params: payload,
       };
       const { data } = await instance.get(`/${URL_SICK}`, config);
-      const resultData = data.slice(0, 7);
-      cacheStorage.put(queryStr, new Response(JSON.stringify(resultData)));
-      return resultData;
+      cacheStorage.put(queryStr, new Response(JSON.stringify(data)));
+      return data;
     }
 
     const cached = await cachedResponse?.json();

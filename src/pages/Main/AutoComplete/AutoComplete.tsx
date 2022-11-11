@@ -20,18 +20,20 @@ const AutoComplete = () => {
   return (
     <>
       {data.length > 0 && searchWord !== '' && <Recommand searchWord={searchWord} />}
-      {data.map(({ sickNm }, index) => {
-        const textArray = sickNm.split(searchWord);
-        return (
-          <AutoCompleteItem
-            key={index}
-            index={index}
-            searchWord={searchWord}
-            selectIndex={selectIndex}
-            textArray={textArray}
-          />
-        );
-      })}
+      <div>
+        {data.map(({ sickNm }, index) => {
+          const textArray = sickNm.split(searchWord);
+          return (
+            <AutoCompleteItem
+              key={index}
+              index={index}
+              searchWord={searchWord}
+              selectIndex={selectIndex}
+              textArray={textArray}
+            />
+          );
+        })}
+      </div>
       {data.length === 0 && <EmptyResult />}
     </>
   );
