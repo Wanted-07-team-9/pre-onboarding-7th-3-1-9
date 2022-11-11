@@ -1,8 +1,9 @@
 import * as S from '../styles/MainStyle';
 import { useAppSelector } from 'redux/reducer/hooks';
+import { highLight } from 'utils/highLight';
 
 function RecommendWords() {
-  const { searchData, keyControl } = useAppSelector(state => state.searchData);
+  const { searchData, keyControl, searchWords } = useAppSelector(state => state.searchData);
 
   // 배열의 객제
   if (searchData.length === 0) {
@@ -12,10 +13,11 @@ function RecommendWords() {
   return (
     <S.RecommendBoxItem>
       {searchData.map(({ sickNm }, idx) => {
+        const highLightText = highLight(sickNm, searchWords);
         return (
           <S.recomText key={idx} className={idx === keyControl ? 'keySelect' : ''}>
             <S.recomIcon />
-            <S.recomTexts>{sickNm}</S.recomTexts>
+            <S.recomTexts>{highLightText}</S.recomTexts>
           </S.recomText>
         );
       })}

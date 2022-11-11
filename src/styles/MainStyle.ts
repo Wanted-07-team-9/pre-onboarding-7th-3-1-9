@@ -82,7 +82,6 @@ export const RecentWords = styled.p`
 `;
 
 export const recomText = styled.li`
-  font-weight: 300;
   margin-top: 10px;
   color: #555;
   display: flex;
@@ -95,7 +94,7 @@ export const recomText = styled.li`
 `;
 
 export const recomTexts = styled.span`
-  font-weight: 400;
+  font-weight: 100;
   color: #000;
 `;
 
