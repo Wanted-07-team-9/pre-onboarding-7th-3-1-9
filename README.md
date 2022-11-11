@@ -68,7 +68,7 @@ pre-onboarding-7th-3-1-9 % npm build
 
 [🖍 3차 토의결과](https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/discussions/7)
 
-<!-- [🥇 선정 결과](https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/pull/15) -->
+[🥇 선정 결과](https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/discussions/20)
 
 #
 
@@ -105,6 +105,7 @@ pre-onboarding-7th-3-1-9 % npm build
 - [4️⃣ Assignment](#4️⃣-assignment)
 - [5️⃣ Assignment](#5️⃣-assignment)
 - [6️⃣ Assignment](#6️⃣-assignment)
+- [7️⃣ Assignment](#7️⃣-assignment)
 
 #
 
@@ -223,3 +224,9 @@ https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/blob/bbf1724458dd76
 
 https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/blob/bbf1724458dd765687641bed9246447632d70bc6/src/pages/Main/SearchBar/index.tsx#L14-L23
 https://github.com/Wanted-07-team-9/pre-onboarding-7th-3-1-9/blob/bbf1724458dd765687641bed9246447632d70bc6/src/components/blocks/AutoCompleteItem.tsx#L16-L26
+
+#
+
+### **7️⃣ Assignment (추가 기능)**
+
+-
