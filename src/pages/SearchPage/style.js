@@ -19,6 +19,8 @@ export const SearchInput = styled.input`
 `;
 export const ResultItems = styled.div`
   width: 600px;
+  max-height: 400px;
+  overflow: scroll;
   font-size: 1.3em;
   margin-top: 10px;
   border-radius: 10px;

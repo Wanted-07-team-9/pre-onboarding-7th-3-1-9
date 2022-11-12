@@ -3,7 +3,7 @@ import { getSick } from '../../api/http';
 import * as Styled from './style';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCondition, setIsLoading, setItems } from '../../redux/searchSlicer/searchSlicer';
-import { SearchedItem } from '../../components/SearchedItem';
+import { searchedItem } from '../../utils/searchedItem';
 const SearchPage = () => {
   const dispatch = useDispatch();
   const condition = useSelector(store => store.search.condition);
@@ -46,7 +46,7 @@ const SearchPage = () => {
         <Styled.ResultItems>
           {loading ? <div>검색중</div> : <>{items.length === 0 && <div>검색 결과 없음</div>}</>}
           {items?.map((el, idx) => {
-            return <div key={idx}>{SearchedItem(el.sickNm, condition)}</div>;
+            return <div key={idx}>{searchedItem(el.sickNm, condition)}</div>;
           })}
         </Styled.ResultItems>
       )}

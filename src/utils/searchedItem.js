@@ -1,4 +1,4 @@
-export const SearchedItem = (text, query) => {
+export const searchedItem = (text, query) => {
   if (query !== '' && text.includes(query)) {
     const parts = text.split(new RegExp(`(${query})`, 'gi'));
 
