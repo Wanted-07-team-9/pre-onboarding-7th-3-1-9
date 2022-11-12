@@ -22,8 +22,6 @@ export const SearchSlice = createSlice({
   },
 });
 
-console.log(SearchSlice);
-
 export const { setCondition, setIsLoading, setItems } = SearchSlice.actions;
 
 export default SearchSlice.reducer;

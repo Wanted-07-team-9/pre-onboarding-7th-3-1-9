@@ -3,18 +3,20 @@ import { getSick } from '../../api/http';
 import * as Styled from './style';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCondition, setIsLoading, setItems } from '../../redux/searchSlicer/searchSlicer';
+import { SearchedItem } from '../../components/SearchedItem';
 const SearchPage = () => {
   const dispatch = useDispatch();
   const condition = useSelector(store => store.search.condition);
   const items = useSelector(store => store.search.items);
-  console.log(items.length);
+  const loading = useSelector(store => store.search.isLoading);
+
   useEffect(() => {
     const getSickName = async text => {
       dispatch(setIsLoading(true));
       try {
-        console.log(condition);
         const searchResult = await getSick(text);
         dispatch(setItems(searchResult));
+        dispatch(setIsLoading(false));
       } catch (err) {
         if (err) {
           console.error(err.response?.data);
@@ -24,6 +26,7 @@ const SearchPage = () => {
       }
     };
     const delay = setTimeout(() => getSickName(condition), 300);
+
     return () => clearTimeout(delay);
   }, [condition]);
 
@@ -41,9 +44,9 @@ const SearchPage = () => {
       <Styled.SearchInput onChange={InputData} placeholder="질환명을 입력해주세요" />
       {condition.length === 0 ? null : (
         <Styled.ResultItems>
-          {items.length === 0 && <div>검색어 없음</div>}
+          {loading ? <div>검색중</div> : <>{items.length === 0 && <div>검색 결과 없음</div>}</>}
           {items?.map((el, idx) => {
-            return <div key={idx}>{el.sickNm}</div>;
+            return <div key={idx}>{SearchedItem(el.sickNm, condition)}</div>;
           })}
         </Styled.ResultItems>
       )}
