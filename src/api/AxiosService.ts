@@ -4,9 +4,9 @@ import { sickData } from '../redux/reducer/searchSlice';
 const END_POINT = 'sick';
 export const AxiosService = {
   getCashSearch: async (param: string): Promise<sickData[]> => {
-    if ('caches' in window) {
-      if (param === '') return [];
+    if (param === '') return [];
 
+    if ('caches' in window) {
       const query = {
         sickNm_like: param,
       };
@@ -15,7 +15,7 @@ export const AxiosService = {
       const cashStorage = await caches.open(END_POINT);
       const cashedResponse = await cashStorage.match(queryStr);
 
-      if (!cashedResponse || !cashedResponse.ok) {
+      try {
         const config = {
           params: query,
         };
@@ -24,9 +24,10 @@ export const AxiosService = {
         console.info('calling api');
         cashStorage.put(`${param}`, new Response(JSON.stringify(data)));
         return data;
+      } catch (error) {
+        alert(error);
       }
       const newCached = await cashedResponse?.json();
-
       return newCached;
     }
     return [];
