@@ -1,16 +1,10 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import searchReducer from './reducer/searchSlice';
 
-const reducers = combineReducers({
-  search: searchReducer,
-});
-
 const store = configureStore({
-  reducer: reducers,
-  middleware: getDefaultMiddleware =>
-    getDefaultMiddleware({
-      serializableCheck: false,
-    }),
+  reducer: {
+    search: searchReducer,
+  },
 });
 
 export default store;
